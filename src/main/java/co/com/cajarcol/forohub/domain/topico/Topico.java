@@ -23,6 +23,7 @@ public class Topico {
     private String mensaje;
     @Column(name = "fecha_creacion")
     private LocalDate fechaCreacion;
+    @Column(name = "status")
     private Boolean estado;
 
     public Topico(DatosRegistroTopico datosRegistroTopico){
