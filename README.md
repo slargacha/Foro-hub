@@ -1,6 +1,6 @@
 # 💬 Foro-hub
 
-<br><br>
+<br>
 ## 🚀 Que es?
 
 Para esta ocacion les traigo una divertida aplicacion, en la cual puedes guardar informacion de un topico de un foro. Aqui puedes guardar datos de topicos como, el titulo, el mensaje, etc y esto no es todo tambien tiene una capa de seguridad donde tendras que autenticarte antes de utilizar las otras funcionalidades del sistema.
@@ -17,6 +17,8 @@ Es una aplicacion desarrollada java con ayuda del framework Spring, es una API R
 - Registrar topico
 - Actualizar topico
 - Eliminar topico
+
+<br>
 
 ## 📝 Explicacion de las funcionalidades
 
