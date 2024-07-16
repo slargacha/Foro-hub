@@ -23,7 +23,7 @@ A continuacion vamos a sumergirnos en este sistema y vamos a detallar un poco ca
 
 ### 🔐 Autenticacion
 
-Este sistema cuenta con una capa de segurdad con la ayuda de Spring Security, por lo cual para autenticarse existe un endpoint "/login" a el cual se le puede enviar informaciones mediante el metodo POST en el cuerpo de la solicitud HTTP en formato JSON con el email y password, si no te encuentras registrado en la base de datos no te generara el token necesario para utilizar las demas funcionalidades del programa:
+Este sistema cuenta con una capa de segurdad con la ayuda de Spring Security, por lo cual para autenticarse existe un endpoint "/login" a el cual se le puede enviar informaciones mediante el metodo POST en el cuerpo de la solicitud HTTP en formato JSON con los campos email y password, si no te encuentras registrado en la base de datos no te generara el token necesario para utilizar las demas funcionalidades del programa:
 
 ![image](https://github.com/user-attachments/assets/2f1fb447-d565-4542-acdd-ca6d546f71c7)
 
@@ -35,3 +35,22 @@ Esta caracteristica del sistema funciona mediante el endpoint "/topicos" enviand
 
 ### 🔍 Listar topico por Id
 
+Esta caracteristica funciona igual que la anterior pero opera mediante el endpoint "/topicos/{id}" en donde puede {id} es el codigo del topico que quieres solicitar, en resumen aqui puedes consultar un topico especifico por el id, como se muestra en la siguiente imagen:
+
+![image](https://github.com/user-attachments/assets/3d1f917d-eb2d-457d-94ae-86db45d9fb6d)
+
+### ✏️ Registrar topico
+
+Esta caracteristica tiene como objetivo guardar la informacion de un topico en el sistema, funciona mediante el endpoint "/topicos" enviando una solicitud HTTP utilizando el metodo POST y enviando en el cuerpo la informacion del topico que deseas registrar, los campos que se deben enviar en el JSON son: id, titulo, mensaje. El sistema respondera con una mensaje HTTP en donde el body de la respuesta tendra los campos ingresados en formato JSON tal como los envia el cliente indicando que la operacion fue realizada correctamente:
+
+![image](https://github.com/user-attachments/assets/6a45828f-3960-41b9-a965-bd29f924b779)
+
+### 🔄 Actualizar topico
+
+Aqui podemos actualizar un topico, el endpoint es el "/topicos" enviando una solicitud HTTP utilizando el metodo PUT y en cuerpo de la solicitud, lo mismos campos que se envian para Registrar un topico, el sistema tomara el Id que se envia y lo busca en la base de datos de los topicos, si lo encuentra actualiza los valores, puedes enviar el titulo solamente o el mensaje solamente, el sistema lo tomara y actulizara el valor de los campos enviados:
+
+[image](https://github.com/user-attachments/assets/1e976a7b-d74f-416f-ac2b-019713fcbfd6)
+
+El sistema envia una respuesta HTTP, en donde el cuerpo del mensaje va los campos enviando spor el cliente en formato JSON
+
+###  Eliminar topico
