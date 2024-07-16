@@ -1,6 +1,7 @@
 # 💬 Foro-hub
 
 <br>
+
 ## 🚀 Que es?
 
 Para esta ocacion les traigo una divertida aplicacion, en la cual puedes guardar informacion de un topico de un foro. Aqui puedes guardar datos de topicos como, el titulo, el mensaje, etc y esto no es todo tambien tiene una capa de seguridad donde tendras que autenticarte antes de utilizar las otras funcionalidades del sistema.
@@ -64,9 +65,13 @@ Es aqui donde podemos eliminar un topico, esta funcion opera en el endpoint "/to
 
 El sistema no retorna ninguna informacion.
 
+<br>
+
 ## 📝 Nota:
 
 Para utilizar las funcionalidades del sistema primeramente se debe autenticar, el sistema responde con un token que debera ser enviando en la cabecera de las solicitudes HTTP que se envien a la API, este token tiene 2 hora de duracion, de lo contrario el sistema respondera con un error 403 No autorizado.
+
+<br>
 
 ## 📧 Autor 
 
